@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50d7c763-7f2f-40d2-9ba9-a1243cc3c122" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/MeiZi.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/MeiZi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Include/Mzitu.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Include/Mzitu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/image/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,13 +62,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="227" />
+          <entry key="md" value="378" />
           <entry key="py" value="4" />
+          <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="227" />
+          <entry key="Markdown" value="378" />
+          <entry key="PLAIN_TEXT" value="7" />
           <entry key="Python" value="4" />
         </counts>
       </usages-collector>
@@ -76,14 +78,14 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="jpg" value="2" />
-          <entry key="md" value="1" />
+          <entry key="md" value="2" />
           <entry key="py" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="2" />
-          <entry key="Markdown" value="1" />
+          <entry key="Markdown" value="2" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="6" />
         </counts>
@@ -92,7 +94,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/venv/Include/MzUtils.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="275">
@@ -100,6 +102,18 @@
               <folding>
                 <element signature="e#16#25#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="140">
+                <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -166,11 +180,11 @@
       <list>
         <option value="$PROJECT_DIR$/venv/Include/MeiZiConfig.py" />
         <option value="$PROJECT_DIR$/venv/Include/mm_crawler.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/venv/Include/MeiZi.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/venv/Include/Mzitu.py" />
         <option value="$PROJECT_DIR$/venv/Include/MzUtils.py" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -201,13 +215,7 @@
             <path>
               <item name="YCMeiZiTu" type="b2602c69:ProjectViewProjectNode" />
               <item name="YCMeiZiTu" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="YCMeiZiTu" type="b2602c69:ProjectViewProjectNode" />
-              <item name="YCMeiZiTu" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-              <item name="Include" type="462c0819:PsiDirectoryNode" />
+              <item name="image" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -303,6 +311,21 @@
       <option name="presentableId" value="Default" />
       <updated>1544250419070</updated>
     </task>
+    <task id="LOCAL-00001" summary="更新爬虫代码">
+      <created>1544493282085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544493282085</updated>
+    </task>
+    <task id="LOCAL-00002" summary="更新爬虫代码">
+      <created>1544493426679</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544493426679</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -337,6 +360,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="更新爬虫代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新爬虫代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -384,16 +411,6 @@
     <entry file="file://$PROJECT_DIR$/mzitu/disi 010期 精选/pic_cnt_1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-50">
-            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Include/MeiZi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
@@ -428,6 +445,16 @@
           <folding>
             <element signature="e#16#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="140">
+            <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

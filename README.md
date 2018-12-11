@@ -7,16 +7,19 @@
 
 #### 备注信息
 - 该案例，仅仅是用于学习爬虫，如有侵权，则立马删除该项目。请勿商用！
-- 
+- 如果是觉得好，千万不要忘记star一下。分享是一种美德！
 
 
 #### 关于其他内容介绍
+- 这里只是简单分享一下爬的部分妹子图片
+- ![meizi图片，大约有超过1000张以上，仅仅是很少的一部分](https://github.com/yangchong211/YCMeiZiTu/tree/master/mzitu)
 
 
 #### 02.图片分享
 - ![image](https://github.com/yangchong211/YCMeiZiTu/blob/master/image/1.png)
 - ![image](https://github.com/yangchong211/YCMeiZiTu/blob/master/image/2.png)
 - ![image](https://github.com/yangchong211/YCMeiZiTu/blob/master/image/3.png)
+- ![image](https://github.com/yangchong211/YCMeiZiTu/blob/master/image/4.png)
 
 
 #### 03.如何运行
