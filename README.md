@@ -7,13 +7,16 @@
 
 #### 备注信息
 - 该案例，仅仅是用于学习爬虫，如有侵权，则立马删除该项目。请勿商用！
+- 
 
 
 #### 关于其他内容介绍
-![image](https://upload-images.jianshu.io/upload_images/4432347-7100c8e5a455c3ee.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 #### 02.图片分享
+- ![image](https://github.com/yangchong211/YCMeiZiTu/blob/master/image/1.png)
+- ![image](https://github.com/yangchong211/YCMeiZiTu/blob/master/image/2.png)
+- ![image](https://github.com/yangchong211/YCMeiZiTu/blob/master/image/3.png)
 
 
 #### 03.如何运行
