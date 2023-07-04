@@ -1,0 +1,67 @@
+cmake_minimum_required(VERSION 3.24)
+project(YCStudyC C)
+
+set(CMAKE_C_STANDARD 11)
+
+# day1 基础案例
+# day2 数据类型
+# day3 变量
+# day4 常量
+# day5 存储类
+# day6 运算符
+# day7 语句，判断
+# day8 循环
+# day9 函数案例
+# day10 作用域案例
+# day11 数组
+# day12 枚举
+# day13 指针
+# day14 函数指针&回调函数
+# day15 自负床
+# day16 结构体
+# day17 共用体
+# day18 位域
+# day19 typedef
+# day20 输入和输出
+# day21 file文件
+# day22 预处理器
+# day23 头文件
+# day24 类型转化
+# day25 错误处理
+# day26 可变参数
+# day27 内存管理
+# day28 命令行参数
+
+add_executable(
+        YCStudyC main.c
+        # c语言案例
+        study1/day1_hello_word.c
+        study1/day2_data.c
+        study1/day3_var.c
+        study1/day4_val.c
+        study1/day5_ccl.c
+        study1/day6_ysf.c
+        study1/day7_yuju.c
+        study1/day8_while.c
+        study1/day9_fun.c
+        study1/day10_zyy.c
+        study1/day11_array.c
+        study1/day12_enum.c
+        study1/day13_runoob.c
+        study1/day14_callback.c
+        study1/day15_string.c
+        study1/day16_struct.c
+        study1/day17_union.c
+        study1/day18_weiyu.c
+        study1/day19_typedef.c
+        study1/day20_print_scanf.c
+        study1/day21_file.c
+        study1/day22_yclq.c
+        study1/day23_header.h
+        study1/day23_header.c
+        study1/day24_zh.c
+        study1/day25_error.c
+        study1/day26_params.c
+        study1/day27_memory.c
+        study1/day28_cmd.c
+)
