@@ -33,34 +33,35 @@ set(CMAKE_CXX_STANDARD 17)
 # day26 动态内存
 # day27 命名空间
 # day28 模版
+# day29 预处理器
 
 add_executable(YCStudyCC
         main.cpp
         # 下面是c++
-        study/day1_hello.cpp
-        study/day2_zhushi.cpp
-        study/day3_data_type.cpp
-        study/day4_var.cpp
-        study/day5_zyy.cpp
-        study/day6_val.cpp
-        study/day7_xsf.cpp
-        study/day8_ysf.cpp
-        study/day9_yuju.cpp
-        study/day10_fun.cpp
-        study/day11_num.cpp
-        study/day12_array.cpp
-        study/day13_string.cpp
-        study/day14_zhizhen.cpp
-        study/day15_reference.cpp
-        study/day16_time.cpp
-        study/day17_input.cpp
-        study/day18_struct.cpp
-        study/day19_class.cpp
-        study/day20_extend.cpp
-        study/day21_overive.cpp
-        study/day22_duotai.cpp
-        study/day23_abs.cpp
-        study/day24_file_io.cpp
-        study/day25_exception.cpp
-        study/day26_memory.cpp
-        study/day27_space.cpp study/day28_template.cpp)
+        study1/day1_hello.cpp
+        study1/day2_zhushi.cpp
+        study1/day3_data_type.cpp
+        study1/day4_var.cpp
+        study1/day5_zyy.cpp
+        study1/day6_val.cpp
+        study1/day7_xsf.cpp
+        study1/day8_ysf.cpp
+        study1/day9_yuju.cpp
+        study1/day10_fun.cpp
+        study1/day11_num.cpp
+        study1/day12_array.cpp
+        study1/day13_string.cpp
+        study1/day14_zhizhen.cpp
+        study1/day15_reference.cpp
+        study1/day16_time.cpp
+        study1/day17_input.cpp
+        study1/day18_struct.cpp
+        study1/day19_class.cpp
+        study1/day20_extend.cpp
+        study1/day21_overive.cpp
+        study1/day22_duotai.cpp
+        study1/day23_abs.cpp
+        study1/day24_file_io.cpp
+        study1/day25_exception.cpp
+        study1/day26_memory.cpp
+        study1/day27_space.cpp study1/day28_template.cpp study1/day29_define.cpp)
