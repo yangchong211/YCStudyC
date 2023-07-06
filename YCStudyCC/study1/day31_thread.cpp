@@ -15,7 +15,7 @@
 using namespace std;
 #define NUM_THREADS 5
 
-
+void test0();
 void test1();
 void test2();
 void test3();
@@ -26,21 +26,41 @@ void test7();
 void test8();
 
 int main() {
+    test0();
 //    test1();
 //    test2();
 //    test3();
 //    test4();
-    test5();
-    test6();
-    test7();
-    test8();
+//    test5();
+//    test6();
+//    test7();
+//    test8();
     return 0;
 }
 
 // 线程的运行函数
 void *say_hello(void *args) {
-    cout << "Hello Doubi！" << endl;
+    if (args != NULL){
+        string str = *((string *) args);
+        cout << "Hello Doubi！" << str << endl;
+    } else {
+        cout << "Hello Doubi！" << endl;
+    }
     return 0;
+}
+
+void test0(){
+    pthread_t thread;
+    //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数
+    int ret = pthread_create(&thread,NULL, say_hello , (void *)&"yc dou bi");
+    //注意，最后一个传入参数，必须使用 & ，否则参数无法传递
+    //int ret = pthread_create(&thread,NULL, say_hello , (void *)"yc dou bi");
+    //创建线程成功时，函数返回 0，若返回值不为 0 则说明创建线程失败。
+    if (ret != 0) {
+        cout << "pthread_create error: error_code=" << ret << endl;
+    } else {
+        cout << "pthread_create success: " << ret << endl;
+    }
 }
 
 //创建线程
@@ -144,6 +164,9 @@ void test7(){
     //pthread_join() 子程序阻碍调用程序，直到指定的 threadid 线程终止为止。
     //当创建一个线程时，它的某个属性会定义它是否是可连接的（joinable）或可分离的（detached）。
     //只有创建时定义为可连接的线程才可以被连接。如果线程创建时被定义为可分离的，则它永远也不能被连接。
+}
+
+void test8() {
 
 }
 
