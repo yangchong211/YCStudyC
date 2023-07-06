@@ -20,12 +20,20 @@ void test1();
 void test2();
 void test3();
 void test4();
+void test5();
+void test6();
+void test7();
+void test8();
 
 int main() {
 //    test1();
 //    test2();
-    test3();
-    test4();
+//    test3();
+//    test4();
+    test5();
+    test6();
+    test7();
+    test8();
     return 0;
 }
 
@@ -89,7 +97,55 @@ void test4() {
     pthread_exit(NULL);
 }
 
+//向线程传递参数
+//这个实例演示了如何通过结构传递多个参数。您可以在线程回调中传递任意的数据类型，因为它指向 void，如下面的实例所示：
+struct thread_data{
+    int thread_id;
+    char *message;
+};
 
+void *PrintYc(void *thread_arg){
+    struct thread_data *my_data;
+    //my_data = static_cast<thread_data *>(thread_arg);
+    my_data = (struct thread_data *) thread_arg;
+    cout << "Thread ID : " << my_data->thread_id ;
+    cout << " Message : " << my_data->message << endl;
+    pthread_exit(NULL);
+}
+
+void test5() {
+    pthread_t threads[NUM_THREADS];
+    struct thread_data td[NUM_THREADS];
+    int rc;
+    int i;
+    for( i=0; i < NUM_THREADS; i++ ){
+        cout <<"main() : creating thread, " << i << endl;
+        td[i].thread_id = i;
+        td[i].message = (char*)"This is message";
+        //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数
+        rc = pthread_create(&threads[i], NULL,PrintYc, (void *)&td[i]);
+        if (rc){
+            cout << "Error:unable to create thread," << rc << endl;
+            exit(-1);
+        }
+    }
+}
+
+void test6() {
+    pthread_exit(NULL);
+}
+
+
+//连接和分离线程
+//我们可以使用以下两个函数来连接或分离线程：
+//pthread_join (threadid, status)
+//pthread_detach (threadid)
+void test7(){
+    //pthread_join() 子程序阻碍调用程序，直到指定的 threadid 线程终止为止。
+    //当创建一个线程时，它的某个属性会定义它是否是可连接的（joinable）或可分离的（detached）。
+    //只有创建时定义为可连接的线程才可以被连接。如果线程创建时被定义为可分离的，则它永远也不能被连接。
+
+}
 
 
 
