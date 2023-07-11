@@ -37,6 +37,7 @@ set(CMAKE_C_STANDARD 11)
 # study2
 # day1 输出整数，输出单个字符
 # day2 输出浮点数，双精度数
+# day3 两数据相加，两个浮点数相乘
 
 add_executable(
         YCStudyC main.c
@@ -70,4 +71,4 @@ add_executable(
         study1/day26_params.c
         study1/day27_memory.c
         study1/day28_cmd.c
-        study2/day1_print_num.c study2/day2_print_float.c)
+        study2/day1_print_num.c study2/day2_print_float.c study2/day3_number_add.c)
