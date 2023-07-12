@@ -39,6 +39,8 @@ set(CMAKE_C_STANDARD 11)
 # day2 输出浮点数，双精度数
 # day3 两数据相加，两个浮点数相乘，两个数相除
 # day4 字符转ASCII码
+# day5 计算 int, float, double 和 char 字节大小
+# day6 判断是否是基数或者偶数
 
 add_executable(
         YCStudyC main.c
@@ -76,4 +78,5 @@ add_executable(
         study2/day1_print_num.c
         study2/day2_print_float.c
         study2/day3_number_add.c
-        study2/day4_char_ascii.c)
+        study2/day4_char_ascii.c
+        study2/day5_byte.c study2/day6_if_else.c)
