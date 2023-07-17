@@ -43,7 +43,8 @@ set(CMAKE_C_STANDARD 11)
 # day6 判断是否是基数或者偶数
 # day7 输出九九乘法口诀表，计算自然数的和，判断字母
 # day8 循环输出26个字母，判断数字为几位数
-# day9 输出当前文件执行代码
+# day9 输出当前文件执行代码。考点1：file文件操作
+# day10 将字符串写入文件。考点：考察file文件操作
 
 
 # study3 算法练习
@@ -87,4 +88,9 @@ add_executable(
         study2/day2_print_float.c
         study2/day3_number_add.c
         study2/day4_char_ascii.c
-        study2/day5_byte.c study2/day6_if_else.c study2/day7_print_99.c study2/day8_a_z.c)
+        study2/day5_byte.c
+        study2/day6_if_else.c
+        study2/day7_print_99.c
+        study2/day8_a_z.c
+        study2/day9_file.c
+        study2/day10_file_char.c)
