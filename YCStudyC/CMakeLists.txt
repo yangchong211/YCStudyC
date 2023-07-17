@@ -34,7 +34,7 @@ set(CMAKE_C_STANDARD 11)
 # day28 命令行参数
 
 
-# study2
+# study2 案例练习
 # day1 输出整数，输出单个字符
 # day2 输出浮点数，双精度数
 # day3 两数据相加，两个浮点数相乘，两个数相除
@@ -42,6 +42,13 @@ set(CMAKE_C_STANDARD 11)
 # day5 计算 int, float, double 和 char 字节大小
 # day6 判断是否是基数或者偶数
 # day7 输出九九乘法口诀表，计算自然数的和，判断字母
+# day8 循环输出26个字母，判断数字为几位数
+# day9 输出当前文件执行代码
+
+
+# study3 算法练习
+
+
 
 add_executable(
         YCStudyC main.c
@@ -80,4 +87,4 @@ add_executable(
         study2/day2_print_float.c
         study2/day3_number_add.c
         study2/day4_char_ascii.c
-        study2/day5_byte.c study2/day6_if_else.c study2/day7_print_99.c)
+        study2/day5_byte.c study2/day6_if_else.c study2/day7_print_99.c study2/day8_a_z.c)
