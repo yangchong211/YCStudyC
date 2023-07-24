@@ -45,6 +45,7 @@ set(CMAKE_C_STANDARD 11)
 # day8 循环输出26个字母，判断数字为几位数
 # day9 输出当前文件执行代码。考点1：file文件操作
 # day10 将字符串写入文件。考点：考察file文件操作
+# day11 计算两个时间段的差值
 
 
 
@@ -94,4 +95,4 @@ add_executable(
         study2/day7_print_99.c
         study2/day8_a_z.c
         study2/day9_file.c
-        study2/day10_file_char.c)
+        study2/day10_file_char.c study2/day11_date.c)
