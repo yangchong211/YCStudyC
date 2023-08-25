@@ -9,7 +9,7 @@
 //所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 int main(){
     //printf() 用于格式化输出到屏幕。printf() 函数在 "stdio.h" 头文件中声明。
-    printf("hello word , yc 哈哈哈 ");
+    printf("hello word , yc 哈哈哈 \n");
     return 0;
 }
 

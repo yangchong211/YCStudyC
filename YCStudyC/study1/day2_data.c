@@ -15,6 +15,8 @@ int main(){
     printf("int 存储大小 : %lu \n", sizeof(int));       //4字节
     printf("long 存储大小 : %lu \n", sizeof(long));     //8字节
 
+    printf("大小 %ld" , sizeof(long ));
+
 
     //浮点型数据
     printf("float 存储最大字节数 : %lu \n", sizeof(float));    //4
