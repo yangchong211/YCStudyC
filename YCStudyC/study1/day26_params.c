@@ -9,11 +9,25 @@
 //省略号 ... 表示可变参数列表。
 //int func_name(int arg1,  ...);
 int average(int num , ...);
+//使用递归函数计算一个给定的数的阶乘
+double factorial(int i);
+int fibonaci(int i);
 
 int main(){
 //    func_name(2,3,4);
 //    func_name(2,3,4,5);
     average(3,3,4,5);
+
+    //递归
+    int i = 5;
+    printf("%d 的阶乘为 %f \n" , i , factorial(i));
+
+    //斐波那契数列
+    int j;
+    for (int j = 0; j < 10; j++) {
+        printf("数据：%d \t \n" , fibonaci(j));
+    }
+
     return 0;
 }
 
@@ -38,6 +52,22 @@ int average(int num ,  ...) {
     return d;
 }
 
+double factorial(int i) {
+    if (i <= 1) {
+        return 1;
+    }
+    return i * factorial(i - 1);
+}
+
+int fibonaci(int i) {
+    if (i == 0) {
+        return 0;
+    }
+    if (i == 1) {
+        return 1;
+    }
+    return fibonaci(i-1) + fibonaci(i -2);
+}
 
 
 

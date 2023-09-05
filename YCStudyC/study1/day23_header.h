@@ -12,6 +12,8 @@
 
 char *test (void);
 
+void testyc(void);
+
 /**
  * 字符串转大写十六进制
  * @param bin 源数据

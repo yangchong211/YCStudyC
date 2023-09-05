@@ -24,6 +24,23 @@
 ...
 #endif
 
+char *test (void) {
+    int sum = 17, count = 5;
+    double mean;
+    //这里要注意的是强制类型转换运算符的优先级大于除法，因此 sum 的值首先被转换为 double 型，然后除以 count，得到一个类型为 double 的值。
+    mean = (double) sum / count;
+    printf("dou bi 1 value of mean : %f\n", mean);
+    return "a";
+}
+
+void testyc(void) {
+    int sum = 17, count = 5;
+    double mean;
+    //这里要注意的是强制类型转换运算符的优先级大于除法，因此 sum 的值首先被转换为 double 型，然后除以 count，得到一个类型为 double 的值。
+    mean = (double) sum / count;
+    printf("dou bi 2 value of mean : %f\n", mean);
+}
+
 /**
  * 字符串转十六进制
  * @param bin 源数据

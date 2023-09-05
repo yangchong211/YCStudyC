@@ -29,7 +29,7 @@ set(CMAKE_C_STANDARD 11)
 # day23 头文件
 # day24 类型转化
 # day25 错误处理
-# day26 可变参数
+# day26 可变参数和递归
 # day27 内存管理
 # day28 命令行参数
 

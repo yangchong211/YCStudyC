@@ -4,6 +4,7 @@
 
 
 #include <printf.h>
+#include "day23_header.h"
 
 void test1();
 
@@ -12,6 +13,7 @@ void test2();
 int main() {
     test1();
     test2();
+    testyc();
     return 0;
 }
 

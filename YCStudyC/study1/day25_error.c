@@ -18,8 +18,13 @@ void test2();
 void test3();
 
 int main() {
-    test1();
-    test2();
+    //打开一个不存在的文件出现异常
+//    test1();
+
+    //被零除的错误
+//    test2();
+
+    //程序退出状态
     test3();
     return 0;
 }
@@ -38,6 +43,7 @@ void test1() {
         //错误号：2
 
         perror("通过 perror 输出错误");
+        printf("异常 %d" , errnum);
         //通过 perror 输出错误: No such file or directory
 
         //todo 这里报错
@@ -56,10 +62,10 @@ void test2(){
     int divisor = 0;
     int quotient;
 
-//    if( divisor == 0){
-//        fprintf(stderr, "除数为 0 退出运行...\n");
-//        exit(-1);
-//    }
+    if( divisor == 0){
+        fprintf(stderr, "除数为 0 退出运行...\n");
+        exit(-1);
+    }
     quotient = dividend / divisor;
     fprintf(stderr, "quotient 变量的值为 : %d\n", quotient );
     //quotient 变量的值为 : 0
