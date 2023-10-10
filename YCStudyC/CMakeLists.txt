@@ -52,6 +52,10 @@ set(CMAKE_C_STANDARD 11)
 # study3 算法练习
 
 
+# study4 经典100案例
+# study_demo1 有 1、2、3、4 四个数字，能组成多少个互不相同且无重复数字的三位数？都是多少？
+# study_demo2 企业发放的奖金根据利润提成。
+# study_demo3 输出9*9口诀。
 
 add_executable(
         YCStudyC main.c
@@ -95,4 +99,8 @@ add_executable(
         study2/day7_print_99.c
         study2/day8_a_z.c
         study2/day9_file.c
-        study2/day10_file_char.c study2/day11_date.c)
+        study2/day10_file_char.c
+        study2/day11_date.c
+
+        study4/study_demo1.c
+        study4/study_demo2.c study4/study_demo3.c)
