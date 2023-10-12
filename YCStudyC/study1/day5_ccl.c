@@ -15,6 +15,7 @@
 void func1(void );
 static int count = 10;
 
+
 int main(){
     //定义了两个带有相同存储类的变量，auto 只能用在函数内，即 auto 只能修饰局部变量。
     int mount;

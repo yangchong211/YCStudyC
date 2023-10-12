@@ -19,13 +19,15 @@ int addNum(){
     y = 2;
     return x+y;
 }
+int addNum2();
 
 //所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 int main(){
     int result;
     result = addNum();
-    printf("reslut 为：%d" , result);
-    //int num = addNum2();
+    printf("reslut 为：%d \n" , result);
+    int num = addNum2();
+    printf("addNum num 等于 %d \n" , num);
     return 0;
 }
 

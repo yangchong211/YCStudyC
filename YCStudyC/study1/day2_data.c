@@ -9,13 +9,17 @@
 
 //所有的 C 语言程序都需要包含 main() 函数。 代码从 main() 函数开始执行。
 int main(){
+    //数据类型
     //printf() 用于格式化输出到屏幕。printf() 函数在 "stdio.h" 头文件中声明。
     printf("char 存储大小 : %lu \n", sizeof(char));     //1字节
     printf("short 存储大小 : %lu \n", sizeof(short));   //2字节
     printf("int 存储大小 : %lu \n", sizeof(int));       //4字节
     printf("long 存储大小 : %lu \n", sizeof(long));     //8字节
 
-    printf("大小 %ld" , sizeof(long ));
+    printf("大小 %ld \n" , sizeof(long ));
+
+    int a;
+    printf("int 存储大小 ： %lu \n" , sizeof(a));
 
 
     //浮点型数据
@@ -33,10 +37,10 @@ int main(){
     int i = 10;
     float f = 3.14;
     double d = i + f; // 隐式将int类型转换为double类型
-    printf("隐式类型转换实例：\n", d);
+    printf("隐式类型转换实例：%f \n", d);
 
     double d2 = 3.14159;
     int i2 = (int)d2; // 显式将double类型转换为int类型
-    printf("显式类型转换实例：\n", i2);
+    printf("显式类型转换实例：%d \n", i2);
     return 0;
 }
