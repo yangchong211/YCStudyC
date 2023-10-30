@@ -47,4 +47,12 @@ void findStudent(Node* head);
 
 void modifyStudent(Node* head);
 
+void deleteStudent(Node* head);
+
+void sortStudent(Node* head);
+
 void exitSystem();
+
+void saveStudent(Node* head);
+
+void loadStudent(Node* head);

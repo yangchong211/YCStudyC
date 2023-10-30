@@ -9,6 +9,7 @@ int main() {
     //创建头节点
     Node *head = malloc(sizeof(Node));
     head->next = NULL;
+    loadStudent(head);
     while (1) {
         welcome();
         scanChar(head);
@@ -16,7 +17,7 @@ int main() {
     return 0;
 }
 
-void scanChar(Node * head) {
+void scanChar(Node *head) {
     /* 等待从键盘接收一个字符, 输入字符后，回车才能录入，注意：回车符号会被存储至缓存区，下次 循环导致获取到回车
      * char c = getchar();
      * getchar(); 吸收回车
@@ -46,11 +47,11 @@ void scanChar(Node * head) {
             break;
             //删除学生信息
         case '6':
-
+            deleteStudent(head);
             break;
             //按照成绩排序
         case '7':
-
+            sortStudent(head);
             break;
             //推出系统
         case '8':
@@ -79,7 +80,7 @@ void welcome() {
     printf("*********************************\n");
 }
 
-void inputStudent(Node* node) {
+void inputStudent(Node *node) {
     //printf("插入学生 %d , %s ,%d \n" , node->stu.score , node->stu.name , node->stu.stuNum);
     Node *fresh = malloc(sizeof(Node));
     fresh->next = NULL;
@@ -104,38 +105,42 @@ void inputStudent(Node* node) {
     //忘记了system函数（系统调用）是干啥的，其实是可以用的，系统调用就等于在Terminal中输入“指令”，
     //但是,在Mac系统里使用的是Terminal命令,所以，这个命令在Mac系统里不存在，只会提示command not found。
 
+
+
     //暂停程序
     //pause();
     //程序执行到此处会暂停一秒
     //sleep(5);
 
+    saveStudent(node);
+
     //system("clear");
 }
 
-void printStudent(Node* node){
+void printStudent(Node *node) {
     Node *move = node->next;
-    while (move!=NULL) {
-        printf("学号:%d 姓名:%s 成绩:%d \n",move->stu.stuNum,move->stu.name,move->stu.score);
+    while (move != NULL) {
+        printf("学号:%d 姓名:%s 成绩:%d \n", move->stu.stuNum, move->stu.name, move->stu.score);
         move = move->next;
     }
     //pause();
 }
 
-void countStudent(Node* head) {
+void countStudent(Node *head) {
     int count = 0;
     Node *move = head->next;
     while (move != NULL) {
         move = move->next;
         count++;
     }
-    printf("学生总人数为:%d\n",count);
+    printf("学生总人数为:%d\n", count);
     //system("pause");
 }
 
-void findStudent(Node* head) {
+void findStudent(Node *head) {
     int number;
     printf("请输入要查找的学生学号：");
-    scanf("%d" , &number);
+    scanf("%d", &number);
     Node *move = head->next;
     while (move != NULL) {
         if (move->stu.stuNum == number) {
@@ -147,16 +152,40 @@ void findStudent(Node* head) {
     printf("没有查找到学生信息\n");
 }
 
-void modifyStudent(Node* head) {
+void modifyStudent(Node *head) {
     int number;
     printf("请输入要修改的学生学号：");
-    scanf("%d" , &number);
-    Node * move = head;
+    scanf("%d", &number);
+    Node *move = head;
     while (move != NULL) {
         if (move->stu.stuNum == number) {
             printf("请输入学生姓名，成绩\n");
-            scanf("%s%d" , move->stu.name , &move->stu.score);
+            scanf("%s%d", move->stu.name, &move->stu.score);
             printf("修改学生信息成功\n");
+            break;
+        }
+        move = move->next;
+    }
+    if (move == NULL) {
+        printf("未找到学生信息\n");
+    }
+    saveStudent(head);
+}
+
+void deleteStudent(Node *head) {
+    int number;
+    printf("请输入要删除的学生学号：");
+    scanf("%d", &number);
+    Node *move = head;
+    //如何删除链表
+    while (move != NULL) {
+        if (move->stu.stuNum == number) {
+            //删除节点
+            Node *temp = move->next;
+            move->next = move->next->next;
+            free(temp);
+            //将节点设置成null
+            temp = NULL;
             break;
         }
         move = move->next;
@@ -166,8 +195,68 @@ void modifyStudent(Node* head) {
     }
 }
 
+void sortStudent(Node *head) {
+    Node *save = NULL;
+    Node *move = NULL;
+    for (Node *turn = head->next; turn->next != NULL; turn = turn->next) {
+        for (move = head->next; move->next != save; move = move->next) {
+            if (move->stu.score > move->next->stu.score) {
+                Student temp = move->stu;
+                move->stu = move->next->stu;
+                move->next->stu = temp;
+            }
+        }
+        save = move;
+    }
+    printStudent(head);
+}
+
 void exitSystem() {
     system("clear");
     printf("推出学生系统\n");
     exit(0);
 }
+
+void saveStudent(Node *head) {
+    //打开文件
+    FILE *file = fopen("./stu.info", "w");
+    if (file == NULL) {
+        printf("打开文件失败\n");
+        return;
+    }
+    Node *move = head->next;
+    while (move != NULL) {
+        //将数据写到file文件中
+        int i = fwrite(&move->stu, sizeof(Student), 1, file);
+        if (i != 1) {
+            printf("保存%s出现错误\n", move->stu.name);
+        }
+        move = move->next;
+    }
+    //关闭文件
+    fclose(file);
+};
+
+void loadStudent(Node *head) {
+    FILE *file = fopen("./stu.info", "r");
+    if (file == NULL) {
+        printf("未找到学生文件，跳过读取\n");
+        return;
+    }
+    //创建一个结点
+    Node *fresh = malloc(sizeof(Node));
+    fresh->next = NULL;
+    Node *move = head;
+    //不断读取文件
+    while (fread(&fresh->stu, sizeof(Student), 1, file) == 1) {
+        move->next = fresh;
+        move = fresh;
+        fresh = malloc(sizeof(Node));
+        fresh->next = NULL;
+    }
+    free(fresh);
+    //最后多定义一个fresh，要将它释放掉
+    //关闭文件
+    fclose(file);
+    printf("读取成功\n");
+};
