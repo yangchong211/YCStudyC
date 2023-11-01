@@ -10,8 +10,8 @@ int main() {
     Node *head = malloc(sizeof(Node));
     head->next = NULL;
     loadStudent(head);
+    welcome();
     while (1) {
-        welcome();
         scanChar(head);
     }
     return 0;
@@ -123,7 +123,13 @@ void printStudent(Node *node) {
         printf("学号:%d 姓名:%s 成绩:%d \n", move->stu.stuNum, move->stu.name, move->stu.score);
         move = move->next;
     }
-    //pause();
+//    pause();
+    //mac下c语言里面无法运行system语句
+    //在Mac系统里system函数使用的是Terminal命令
+    //所以，这个命令在Mac系统里不存在
+    //通俗点说：你在程序里使用“system("cls")”就等于在Terminal中输入“cls”
+//    system("cls");
+    system("clear");
 }
 
 void countStudent(Node *head) {
@@ -217,6 +223,7 @@ void exitSystem() {
     exit(0);
 }
 
+//保存文件
 void saveStudent(Node *head) {
     //打开文件
     FILE *file = fopen("./stu.info", "w");
