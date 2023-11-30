@@ -11,7 +11,7 @@
 #include <unistd.h>
 //mac 找不到该头文件，window独用
 //#include <conio.h>
-
+#include <stdbool.h>
 
 //定义学生结构体
 typedef struct _Student {

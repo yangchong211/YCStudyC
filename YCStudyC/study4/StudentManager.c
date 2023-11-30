@@ -5,13 +5,16 @@
 //添加头文件
 #include "StudentManager.h"
 
+//头文件`stdbool.h`定义了另一个类型别名`bool`，并且定义了`true`代表`1`、`false`代表`0`。只要加载这个头文件，就可以使用这几个关键字。
+_Bool isScan = true;
+
 int main() {
     //创建头节点
     Node *head = malloc(sizeof(Node));
     head->next = NULL;
     loadStudent(head);
     welcome();
-    while (1) {
+    while (isScan) {
         scanChar(head);
     }
     return 0;
@@ -82,13 +85,14 @@ void welcome() {
 
 void inputStudent(Node *node) {
     //printf("插入学生 %d , %s ,%d \n" , node->stu.score , node->stu.name , node->stu.stuNum);
+    //创建结点
     Node *fresh = malloc(sizeof(Node));
     fresh->next = NULL;
     //输入用户信息
     printf("请输入学生的学号、姓名、成绩: \n");
     //scanf("%d%s%d" , &fresh->stu.stuNum , &fresh->stu.name , &fresh->stu.score);
     scanf("%d%s%d", &fresh->stu.stuNum, fresh->stu.name, &fresh->stu.score);
-
+    //定义指针指向头结点，用于遍历链表
     Node *move = node;
     while (move->next != NULL) {
         move = move->next;
@@ -116,6 +120,7 @@ void inputStudent(Node *node) {
 
     //system("clear");
 }
+
 
 void printStudent(Node *node) {
     Node *move = node->next;

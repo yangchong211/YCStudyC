@@ -100,4 +100,4 @@ add_executable(
         study2/day11_date.c
 
         study4/StudentManager.c
-        study4/StudentManager.h)
+        study4/StudentManager.h study3/game.c)
