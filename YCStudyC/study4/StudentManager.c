@@ -137,6 +137,7 @@ void printStudent(Node *node) {
     system("clear");
 }
 
+
 void countStudent(Node *head) {
     int count = 0;
     Node *move = head->next;
@@ -228,6 +229,7 @@ void exitSystem() {
     exit(0);
 }
 
+
 //保存文件
 void saveStudent(Node *head) {
     //打开文件
@@ -267,8 +269,7 @@ void loadStudent(Node *head) {
         fresh->next = NULL;
     }
     free(fresh);
-    //最后多定义一个fresh，要将它释放掉
-    //关闭文件
+    //最后多定义一个fresh，要将它释放掉。关闭文件
     fclose(file);
     printf("读取成功\n");
 };
