@@ -164,6 +164,7 @@ void findStudent(Node *head) {
     printf("没有查找到学生信息\n");
 }
 
+
 void modifyStudent(Node *head) {
     int number;
     printf("请输入要修改的学生学号：");
