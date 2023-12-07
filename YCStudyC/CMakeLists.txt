@@ -105,4 +105,4 @@ add_executable(
         study4/StudentManager.h
 
 
-        study5/Sokoban.c)
+        study5/Sokoban.c study5/Sokoban.h)
