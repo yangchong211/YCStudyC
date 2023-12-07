@@ -99,5 +99,10 @@ add_executable(
         study2/day10_file_char.c
         study2/day11_date.c
 
+        study3/GameMain.c
+
         study4/StudentManager.c
-        study4/StudentManager.h study3/game.c)
+        study4/StudentManager.h
+
+
+        study5/Sokoban.c)
