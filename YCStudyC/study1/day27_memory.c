@@ -10,26 +10,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void test();
-
+void test0();
 //动态分配内存
 void test1();
-
 //重新调整内存的大小和释放内存
 void test2();
 
+void test3();
+
 int main() {
-    //test();
+    test0();
     test1();
     test2();
     return 0;
 }
 
 
-void test() {
+void test0() {
     //动态内存，超过了怎么班
     char name[100];
+    //1.内存如何管理？通过指针变量来管理
     char *des;
+    //通过字符串拷贝完成赋值
     strcpy(name , "逗比充");
     //动态分配内存
     des = malloc(30 * sizeof(char));
