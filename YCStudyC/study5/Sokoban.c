@@ -77,7 +77,7 @@ void show() {
             //把数据转为图形输出  墙，人
             switch (map[level][i][j]) {
                 case SPACE:
-                    printf("  ");
+                    printf(" ");
                     break;
                 case WALL:
                     printf("■");

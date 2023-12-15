@@ -105,4 +105,16 @@ add_executable(
         study4/StudentManager.h
 
 
-        study5/Sokoban.c study5/Sokoban.h study7/Calendar.c study7/Calendar.h study8/GuessNumber.c study6/MineClearance.c study6/MineClearance.h)
+        study5/Sokoban.c
+        study5/Sokoban.h
+
+        study6/MineClearance.c
+        study6/MineClearance.h
+
+        study7/Calendar.c
+        study7/Calendar.h
+
+        study8/GuessNumber.c
+
+        study9/GoBangGame.h
+        study9/GoBangGame.c)
