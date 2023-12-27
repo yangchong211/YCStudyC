@@ -13,7 +13,6 @@
 #define RIGHT 77 // 方向键：右
 
 
-
 /*初始化地图信息，墙壁为1，通道为0*/
 int map[ROW][COL] =
         {
@@ -29,19 +28,20 @@ int map[ROW][COL] =
                 {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
         };
 
-int main()
-{
+int main() {
+    man1.x = 10;
+    man1.y = 10;
+    man1.z = 10;
+
+
     /*初始化控制台窗口*/
     system("chcp65001"); // 设置编码格式为UTF-8
     system("cls");       // cmd窗口清屏
 
     /*打印地图*/
-    for (int i = 0; i < ROW; i++)
-    {
-        for (int j = 0; j < COL; j++)
-        {
-            switch (map[i][j])
-            {
+    for (int i = 0; i < ROW; i++) {
+        for (int j = 0; j < COL; j++) {
+            switch (map[i][j]) {
                 case 0: // 打印通道
                     printf(" ");
                     break;
@@ -61,14 +61,12 @@ int main()
     printf("@");
 
     /*游戏逻辑主体*/
-    while (1)
-    {
+    while (1) {
         /*获取角色控制指令*/
         int willx = 0;      // 暂存角色移动后的横坐标
         int willy = 0;      // 暂存角色移动后的纵坐标
         char key = getchar(); // 读取keycode
-        switch (key)
-        {
+        switch (key) {
             case UP: // 获取角色上移后的坐标
                 willx = man.x;
                 willy = man.y - man.v;
@@ -90,8 +88,7 @@ int main()
         }
 
         /*判断交互条件*/
-        switch (map[willy][willx])
-        {
+        switch (map[willy][willx]) {
             case 0: // 在通道中移动
                 man.x = willx; // 传递移动后的横坐标
                 man.y = willy; // 传递移动后的纵坐标

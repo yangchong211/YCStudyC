@@ -15,6 +15,14 @@ struct Man {
     int v; // 角色移动速度
 };
 
-
 /*初始化游戏角色*/
 struct Man man = {1, 1, 1};
+
+
+struct Man1 {
+    int x;
+    int y;
+    int z;
+};
+
+struct Man1 man1;
