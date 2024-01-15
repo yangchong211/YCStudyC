@@ -117,4 +117,8 @@ add_executable(
         study8/GuessNumber.c
 
         study9/GoBangGame.h
-        study9/GoBangGame.c study10/MazeGame.c study10/MazeGame.h)
+        study9/GoBangGame.c
+        study10/MazeGame.c
+        study10/MazeGame.h
+        demo/StuManager.c
+        demo/StuManager.h)

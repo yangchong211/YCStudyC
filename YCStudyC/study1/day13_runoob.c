@@ -3,6 +3,7 @@
 //
 
 
+
 #include <printf.h>
 
 void test1();
@@ -21,9 +22,16 @@ int main() {
     return 0;
 }
 
+
 //每一个变量都有一个内存位置，每一个内存位置都定义了可使用 & 运算符访问的地址，它表示了在内存中的一个地址。
 void test1() {
     int var_runoob = 10;
+    printf("var_runoob 地址是多少：%p \n",&var_runoob);
+    printf("var_runoob 值是多少：%d \n",var_runoob);
+    //var_runoob 地址是多少：0x16fa6f57c
+    //var_runoob 值是多少：10
+
+
     //*表示指针
     int *p;
     //&表示访问地址
@@ -31,6 +39,9 @@ void test1() {
     //%p 指针
     printf("p 地址是多少：%p \n",p);
     printf("p 值是多少：%d \n",*p);
+    //打印指针
+    //p 地址是多少：0x16d9b357c
+    //p 值是多少：10
 }
 
 void test2() {
@@ -44,6 +55,9 @@ void test2() {
     printf("ip 变量存储的地址: %p\n", ip );
     /* 使用指针访问值 */
     printf("*ip 变量的值: %d\n", *ip );
+    //var 变量的地址: 0x16d9b357c
+    //ip 变量存储的地址: 0x16d9b357c
+    //*ip 变量的值: 20
 }
 
 //在变量声明的时候，如果没有确切的地址可以赋值，为指针变量赋一个 NULL 值是一个良好的编程习惯。赋为 NULL 值的指针被称为空指针。
