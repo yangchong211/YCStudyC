@@ -61,6 +61,7 @@ void scanChar(Node *head) {
             break;
             //删除学生信息
         case '6':
+            deleteStudent(head);
             break;
             //按照成绩排序
         case '7':
@@ -129,18 +130,33 @@ void findStudent(Node *head) {
 }
 
 //修改学生信息
-void modifyStudent(Node* head) {
+void modifyStudent(Node *head) {
     Node *move = head->next;
     int number;
     printf("请输入要修改的学生学号：");
-    scanf("%d",&number);
+    scanf("%d", &number);
     while (move != NULL) {
         if (number == move->stu.num) {
             //找到了学生，接下来就是修改
             printf("请输入学生姓名，成绩\n");
-            scanf("%s %d" , move->stu.name , &move->stu.score);
+            scanf("%s %d", move->stu.name, &move->stu.score);
             printf("修改学生信息成功\n");
             return;
+        }
+        move = move->next;
+    }
+}
+
+//删除学生信息
+void deleteStudent(Node *head) {
+    Node *move = head->next;
+    int number;
+    printf("请输入要删除的学生学号：");
+    scanf("%d" , &number);
+    while (move != NULL) {
+        if (number == move->stu.num) {
+            //找到了学生，接下来就是删除
+
         }
         move = move->next;
     }
@@ -173,7 +189,7 @@ void saveStudent(Node *head) {
 
 //读取文件
 void loadStudent(Node *head) {
-    FILE *file = fopen("./stu.info","r");
+    FILE *file = fopen("./stu.info", "r");
     if (file == NULL) {
         printf("未找到学生文件，跳过读取\n");
         return;

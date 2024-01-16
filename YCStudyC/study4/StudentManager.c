@@ -12,6 +12,7 @@ int main() {
     //创建头节点
     Node *head = malloc(sizeof(Node));
     head->next = NULL;
+    //从本地取数据
     loadStudent(head);
     welcome();
     while (isScan) {

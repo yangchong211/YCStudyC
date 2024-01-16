@@ -36,24 +36,24 @@ typedef struct _Node {
 
 void welcome();
 
-void scanChar(Node * head);
+void scanChar(Node *head);
 
-void inputStudent(Node* node);
+void inputStudent(Node *node);
 
-void printStudent(Node* node);
+void printStudent(Node *node);
 
-void countStudent(Node* head);
+void countStudent(Node *head);
 
-void findStudent(Node* head);
+void findStudent(Node *head);
 
-void modifyStudent(Node* head);
+void modifyStudent(Node *head);
 
-void deleteStudent(Node* head);
+void deleteStudent(Node *head);
 
-void sortStudent(Node* head);
+void sortStudent(Node *head);
 
 void exitSystem();
 
-void saveStudent(Node* head);
+void saveStudent(Node *head);
 
-void loadStudent(Node* head);
+void loadStudent(Node *head);
