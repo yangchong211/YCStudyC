@@ -302,30 +302,23 @@ void UnderGraduate::displayDetails() {
 //UnderGraduate
 class UnderGraduateManager {
 private:
-    int top = 0;
+    //warning: default member initializer for non-static data member is a C++11 extension
+    //变量未在此范围内声明
+//    int top = 0;
     UnderGraduate undergraduates[100];
 public:
+    int top = 0;
     UnderGraduateManager();//读取文件
     int queryByNo(string sno);
-
     void clearStudent();
-
     int addStudent(UnderGraduate s);
-
     int modifyStudent(string sno);
-
     int deleteStudent(string sno);
-
     int queryStudent(string sno);
-
     void displayAll();
-
     void dataManage();
-
     void dataSave();
-
     void dataRead();
-
     ~UnderGraduateManager();//写入文件
 };
 
