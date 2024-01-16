@@ -70,4 +70,8 @@ add_executable(YCStudyCC
         study1/day29_define.cpp
         study1/day30_signal.cpp
         study1/day31_thread.cpp
-        study1/day32_web.cpp)
+        study1/day32_web.cpp
+        study2/text.cpp
+        study4/5.cpp
+        study4/51.cpp
+        study4/graduateManager.h)
