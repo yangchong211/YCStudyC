@@ -76,4 +76,4 @@ add_executable(YCStudyCC
         study4/51.cpp
         study4/graduateManager.h
         study4/StudentManager.cpp
-        study4/StudentManager.h)
+        study4/StudentManager.h test/StudentManager.cpp)

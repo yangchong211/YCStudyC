@@ -15,8 +15,8 @@ using namespace std;
 
 // main() 是程序开始执行的地方
 int main(){
-
     cout << "Hello World 哈哈哈 \n"; // 输出 Hello World
     //下一行 return 0; 终止 main( )函数，并向调用进程返回值 0。
+    cout << "逗比" ;
     return 0;
 }

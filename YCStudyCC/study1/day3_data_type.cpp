@@ -86,18 +86,37 @@ class Derived : public Base{
 
 };
 void test3(){
+    bool b = true;
+    char c = 'a';
+    int i = 100;
+    float f = 5.2;
+    double d = 13.14;
+    wchar_t wc = 'd';
+
+    //注意：不同系统会有所差异，一字节为 8 位。
+    //1 byte = 8个字节     0000 0001 这就是8个字节，都是二进制
+    //注意：默认情况下，int、short、long都是带符号的，即 signed。
+
+    char cc = '1';
+    signed char sc = '1';
+    unsigned char unc = '1';
+    cout << "这个是打印字节数组" << sizeof(cc);
+    cout << "\tchar: \t" << "所占字节数：" << sizeof(sc);
+    cout << "\tsigned char: \t" << "所占字节数：" << sizeof(sc);
+    cout << "\tunsigned char: \t" << "所占字节数：" << sizeof(unc);
+
+
+
     //静态转换
-    int i = 10;
-    float f = i;
-    float f2 = static_cast<float>(i);
-
-    //动态转换
-    Base* base = new Derived();
-//    Derived* derived = dynamic_cast<Derived*>(base);
-
-    //常量转化
-    const int j = 10;
-    int & r = const_cast<int&>(j);
-
-
+//    int i = 10;
+//    float f = i;
+//    float f2 = static_cast<float>(i);
+//
+//    //动态转换
+//    Base* base = new Derived();
+////    Derived* derived = dynamic_cast<Derived*>(base);
+//
+//    //常量转化
+//    const int j = 10;
+//    int & r = const_cast<int&>(j);
 }

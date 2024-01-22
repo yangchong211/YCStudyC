@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
@@ -10,13 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50d7c763-7f2f-40d2-9ba9-a1243cc3c122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/YCStudyC.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day1_hello" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YCStudyCC/test/01.学生管理系统.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YCStudyCC/test/StudentManager.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/YCStudyCC/test/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/docs/11.pointer指针.md" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyC/docs/11.pointer指针.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyC/study1/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyC/study1/day13_runoob.c" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyC/study1/day13_runoob.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YCStudyCC/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YCStudyCC/study1/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/study1/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YCStudyCC/study1/day1_hello.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/study1/day1_hello.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YCStudyCC/study1/day3_data_type.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/study1/day3_data_type.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +121,10 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "/Users/yc/github/YCStudyC",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -197,6 +205,7 @@
       <option name="presentableId" value="Default" />
       <updated>1544250419070</updated>
       <workItem from="1697161110368" duration="138000" />
+      <workItem from="1705887562748" duration="733000" />
     </task>
     <task id="LOCAL-00001" summary="更新爬虫代码">
       <created>1544493282085</created>
