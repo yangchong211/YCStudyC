@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 # day1 基础教程
 # day2 注释
 # day3 数据类型
-# day4 变量
+# day4 变量类型
 # day5 作用域
 # day6 常量
 # day7 修饰副

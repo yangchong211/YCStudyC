@@ -12,12 +12,12 @@
 
 using namespace std;
 
+//局部变量
 void test1();
-
+//全局变量
 void test2();
-
 void test3();
-
+//类作用域
 void test4();
 
 int main() {
@@ -29,16 +29,18 @@ int main() {
 }
 
 //局部变量
+//在函数或一个代码块内部声明的变量，称为局部变量。它们只能被函数内部或者代码块内部的语句使用。下面的实例使用了局部变量：
 void test1() {
     int b;
-    int c,
-            a = 10;
+    int c, a = 10;
     b = 20;
     c = a + b;
     cout << c << " \n";
 }
 
 //全局变量
+//在所有函数外部定义的变量（通常是在程序的头部），称为全局变量。全局变量的值在程序的整个生命周期内都是有效的。
+//全局变量可以被任何函数访问。也就是说，全局变量一旦声明，在整个程序中都是可用的。下面的实例使用了全局变量和局部变量：
 // 全局变量声明
 int g;
 
@@ -69,8 +71,13 @@ private:
     int i;
 };
 
-void test4() {
 
+//以上实例中，MyClass 类中声明了一个名为 class_var 的类作用域变量。可以使用类名和作用域解析运算符 :: 来访问这个变量。
+//在 test4() 函数中访问 class_var 时输出的是 30。
+int MyClass::class_var = 30;
+void test4() {
+//    int MyClass::class_var = 20;
+    std::cout << "类变量" << MyClass::class_var << std::endl;
 }
 
 

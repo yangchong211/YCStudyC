@@ -4,7 +4,9 @@
 #include <iostream>
 using namespace std;
 
+//C++ 变量类型
 void test1();
+//C++ 中的变量定义
 void test2();
 
 int main(){
@@ -13,6 +15,10 @@ int main(){
     return 0;
 }
 
+
+//C++ 变量类型
+//在 C++ 中，有多种变量类型可用于存储不同种类的数据。
+//C++ 中每个变量都有指定的类型，类型决定了变量存储的大小和布局，该范围内的值都可以存储在内存中，运算符可应用于变量上。
 void test1(){
     //int i, j, k; 声明并定义了变量 i、j 和 k，这指示编译器创建类型为 int 的名为 i、j、k 的变量。
     int    i, j, k;
@@ -26,11 +32,17 @@ void test1(){
     char x = 'x';               // 变量 x 的值为 'x'
 }
 
+
+
+//C++ 中的变量定义
+//变量定义就是告诉编译器在何处创建变量的存储，以及如何创建变量的存储。
 void test2(){
     // 变量定义
     int a, b;
     int c;
     float f;
+    double d;
+
 
     // 实际初始化
     a = 10;
@@ -40,5 +52,7 @@ void test2(){
     cout << c << endl ;
     f = 70.0/3.0;
     cout << f << endl ;
+
+
 }
 
