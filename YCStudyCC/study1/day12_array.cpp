@@ -27,6 +27,7 @@ int main() {
 }
 
 void test1(){
+    //声明数组
     int n[10];
     for (int i = 0; i < 10; i++) {
         n[i] = i+100;
@@ -37,4 +38,14 @@ void test1(){
         cout << setw( 7 )<< j << setw( 13 ) << n[ j ] << endl;
     }
     cout << "\n";
+}
+
+void test2() {
+    //声明数组
+    double balance1[10];
+    //初始化数组
+    double balance2[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+    double balance3[] = {1000.0, 2.0, 3.4, 7.0, 50.0};
+    //访问数组元素
+    double salary = balance2[9];
 }

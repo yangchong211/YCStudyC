@@ -10,9 +10,9 @@ set(CMAKE_CXX_STANDARD 17)
 # day4 变量类型
 # day5 作用域
 # day6 常量
-# day7 修饰副
+# day7 修饰副，存储类
 # day8 运算符
-# day9 语句
+# day9 语句。循环，判断
 # day10 函数
 # day11 数字
 # day12 数组
@@ -76,4 +76,5 @@ add_executable(YCStudyCC
         study4/51.cpp
         study4/graduateManager.h
         study4/StudentManager.cpp
-        study4/StudentManager.h test/StudentManager.cpp)
+        study4/StudentManager.h
+        test/StudentManager.cpp)

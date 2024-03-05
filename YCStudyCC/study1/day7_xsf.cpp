@@ -8,13 +8,49 @@ using namespace std;
 
 /*
  * 这个程序演示了有符号整数和无符号整数之间的差别
+ *
 */
+//C++ 修饰符类型
+//C++ 允许在 char、int 和 double 数据类型前放置修饰符。
+//
+//修饰符是用于改变变量类型的行为的关键字，它更能满足各种情境的需求。
+//
+//下面列出了数据类型修饰符：
+//
+//signed：表示变量可以存储负数。对于整型变量来说，signed 可以省略，因为整型变量默认为有符号类型。
+//
+//unsigned：表示变量不能存储负数。对于整型变量来说，unsigned 可以将变量范围扩大一倍。
+//
+//short：表示变量的范围比 int 更小。short int 可以缩写为 short。
+//
+//long：表示变量的范围比 int 更大。long int 可以缩写为 long。
+//
+//long long：表示变量的范围比 long 更大。C++11 中新增的数据类型修饰符。
+//
+//float：表示单精度浮点数。
+//
+//double：表示双精度浮点数。
+//
+//bool：表示布尔类型，只有 true 和 false 两个值。
+//
+//char：表示字符类型。
+//
+//wchar_t：表示宽字符类型，可以存储 Unicode 字符。
+
+
+
+//C++ 修饰符类型
 void test1();
 //C++ 中的类型限定符
 void test2();
+//auto 存储类      register 存储类
+void test3();
+void test4();
 int main() {
     test1();
     test2();
+    test3();
+    test4();
     return 0;
 }
 
@@ -25,6 +61,7 @@ void test1(){
     i = j;
     cout << i << " " << j << "\n";
     //-15536 50000
+    //上述结果中，无符号短整数 50,000 的位模式被解释为有符号短整数 -15,536。
 }
 
 //C++ 中的类型限定符
@@ -69,9 +106,27 @@ void test2(){
     // 但是实际上是否会存储在寄存器中由编译器决定
 //}
 
+//auto 存储类
+//register 存储类
+void test3() {
+    //自 C++ 11 以来，auto 关键字用于两种情况：声明变量时根据初始化表达式自动推断该变量的类型、声明函数时函数返回值的占位符。
+    auto f=3.14;      //double
+    auto s("hello");  //const char*
+    auto z = new auto(9); // int*
+//    auto x1 = 5, x2 = 5.0, x3='r';//错误，必须是初始化为同一类型
+
+    //register 存储类
+    //register 存储类用于定义存储在寄存器中而不是 RAM 中的局部变量。这意味着变量的最大尺寸等于寄存器的大小（通常是一个词），且不能对它应用一元的 '&' 运算符（因为它没有内存位置）。
+//    {
+//        register int  miles;
+//    }
+}
 
 
 
+void test4() {
+
+}
 
 
 

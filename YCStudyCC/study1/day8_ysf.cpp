@@ -10,6 +10,7 @@
 //赋值运算符
 //杂项运算符
 
+
 #include <iostream>
 
 using namespace std;
@@ -44,9 +45,9 @@ void test1() {
     cout << "Line 2 - c 的值是 " << c << endl;
     c = a * b;
     cout << "Line 3 - c 的值是 " << c << endl;
-    c = a / b;
+    c = a / b;  //分子除以分母
     cout << "Line 4 - c 的值是 " << c << endl;
-    c = a % b;
+    c = a % b;  //取模运算符，整除后的余数
     cout << "Line 5 - c 的值是 " << c << endl;
 
     int d = 10;   //  测试自增、自减
