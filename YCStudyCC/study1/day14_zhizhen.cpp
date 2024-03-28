@@ -6,20 +6,23 @@
 
 #include <iostream>
 using namespace std;
-//C++ 指针
+
+//C++ 指针。内存访问地址
 void test1();
-//什么是指针？
+//什么是指针？内存直接地址
 void test2();
 //C++ 中使用指针
 void test3();
 
 int main(){
-    test1();
-    test2();
-    test3();
+//    test1();
+//    test2();
+//    test3();
     return 0;
 }
 
+//内存地址
+//通过指针，可以简化一些 C++ 编程任务的执行，还有一些任务，如动态内存分配，没有指针是无法执行的。
 void test1(){
     int var1;
     char var2[10];
@@ -27,11 +30,19 @@ void test1(){
     cout << &var1 << endl;
     cout << "var2 变量的地址： ";
     cout << &var2 << endl;
+
+    //每一个变量都有一个内存位置，每一个内存位置都定义了可使用连字号（&）运算符访问的地址，它表示了在内存中的一个地址。
+    int var3;
+    char var4[20];
+    //& 符号，表示访问内存地址
+    cout << "var3变量的地址" << &var3 << endl;
+    cout << "var4变量的地址" << &var4 << endl;
 }
 
 //指针是一个变量，其值为另一个变量的地址，即，内存位置的直接地址。
 //就像其他变量或常量一样，您必须在使用指针存储其他变量地址之前，对其进行声明。指针变量声明的一般形式为：
 void test2(){
+    //内存直接地址
     int    *ip;    /* 一个整型的指针 */
     double *dp;    /* 一个 double 型的指针 */
     float  *fp;    /* 一个浮点型的指针 */
@@ -44,23 +55,14 @@ void test3(){
     ip = &var;       // 在指针变量中存储 var 的地址
     cout << "Value of var variable: ";
     cout << var << endl;
-    // 输出在指针变量中存储的地址
+    cout << &var << endl;
+    // 输出在指针变量中存储的地址。
     cout << "Address stored in ip variable: ";
     cout << ip << endl;
     // 访问指针中地址的值
     cout << "Value of *ip variable: ";
-    cout << *ip << endl;
-
-    char key1[] = "1";
-    char key2[] = "2";
-    char *public_key;
-    char *private_key;
-//    public_key = key1;
-//    private_key = key2;
-    public_key = "1";
-    private_key = "2";
-    cout << *public_key << endl;
-    cout << *private_key << endl;
+//    cout << *ip << endl;
+//    cout << &ip << endl;
 }
 
 

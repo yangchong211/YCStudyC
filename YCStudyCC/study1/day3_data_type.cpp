@@ -129,6 +129,7 @@ void test3() {
     cout << "\tchar: \t" << "所占字节数：" << sizeof(sc);
     cout << "\tsigned char: \t" << "所占字节数：" << sizeof(sc);
     cout << "\tunsigned char: \t" << "所占字节数：" << sizeof(unc);
+    cout << "\n" << endl;
 }
 
 //类型转换
@@ -142,10 +143,12 @@ class Derived : public Base {
 
 };
 
+
 //类型转换
 //类型转换是将一个数据类型的值转换为另一种数据类型的值。
 //C++ 中有四种类型转换：静态转换、动态转换、常量转换和重新解释转换。
 void test4() {
+    cout << "类型转化" << endl;
     //静态转换  static_cast
     //静态转换是将一种数据类型的值强制转换为另一种数据类型的值。
     //静态转换通常用于比较类型相似的对象之间的转换，例如将 int 类型转换为 float 类型。
@@ -153,7 +156,16 @@ void test4() {
     int i = 10;
     float f = i;
     float f2 = static_cast<float>(i);
+    float f3 = 11.3;
+    int i2 = static_cast<int >(f3);
+    cout << "静态转换 " <<  f2 << " , " << i2 <<endl;
 
+    //size_t是C++中的一种无符号整数类型，用于表示对象的大小或元素的数量。它通常用于与内存分配、数组索引和循环计数等相关的操作。
+    //size_t的大小在不同的平台上可能会有所变化，但它通常被设计为足够大以容纳系统中最大可能的对象大小。在大多数情况下，size_t的大小与unsigned int或unsigned long相同。
+    size_t buffer_size = static_cast<size_t>(4096);
+    //warning: 'auto' type specifier is a C++11 extension [-Wc++11-extensions]
+    //auto buffer_size2 = static_cast<size_t>(4096);
+    cout << "size_t静态转换 " <<  buffer_size  << " , " << buffer_size <<endl;
 
 
     //动态转换 dynamic_cast
