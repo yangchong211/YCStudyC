@@ -10,14 +10,19 @@
 #include <iostream>
 
 using namespace std;
-
+//new 和 delete 运算符
+//new 运算符，为给定类型的变量在运行时分配堆内的内存，这会返回所分配的空间地址。
+//delete 运算符，如果不再需要动态分配的内存空间，删除之前由 new 运算符分配的内存。
 void test1();
-
+//malloc() 和 new 对比
 void test2();
+//数组的动态内存分配
+void test3();
 
 int main() {
     test1();
     test2();
+    test3();
     return 0;
 }
 
@@ -35,7 +40,7 @@ void test1() {
     cout << "Value of pvalue : " << *pvalue << endl;
     delete pvalue;         // 释放内存
 
-
+    //释放内存2
     string *str = NULL;
     str = new string;
     cout << "Value of str : " << *str << " --  " << str << endl;
@@ -46,7 +51,13 @@ void test1() {
     delete str;
 }
 
+
 void test2() {
+    //malloc() 函数在 C 语言中就出现了，在 C++ 中仍然存在，但建议尽量不要使用 malloc() 函数。
+    //new 与 malloc() 函数相比，其主要的优点是，new 不只是分配了内存，它还创建了对象。
+}
+
+void test3() {
     int **p;
     int i, j;
     //p[4][8]
@@ -73,6 +84,8 @@ void test2() {
     }
     delete[] p;
 }
+
+
 
 
 

@@ -26,6 +26,11 @@ int main() {
 void test1() {
     //你可以用 "\n" 代替以上代码里的 endl。
     cout << "type: \t\t" << "************size**************" << endl;
+    //sizeof是一个运算符，用于获取数据类型或变量的字节大小。它返回一个size_t类型的值，表示所操作对象的字节大小。
+    //sizeof运算符可以用于以下几种情况：
+    //数据类型的大小：可以使用sizeof运算符来获取数据类型的字节大小。例如，sizeof(int)将返回int类型的字节大小。
+    //变量的大小：可以使用sizeof运算符来获取变量的字节大小。例如，sizeof(variable)将返回变量variable的字节大小。
+    //数组的大小：可以使用sizeof运算符来获取数组的字节大小。例如，sizeof(array)将返回数组array的字节大小。
     cout << "bool: \t\t" << "所占字节数：" << sizeof(bool);
     cout << "\t最大值" << (numeric_limits<bool>::max)();
     cout << "\t\t最小值" << (numeric_limits<bool>::min)() << endl;
@@ -182,12 +187,15 @@ void test4() {
     const int k = 20;
     int & s = const_cast<int&>(k);
 
-
     //重新解释转换（Reinterpret Cast）
     //重新解释转换将一个数据类型的值重新解释为另一个数据类型的值，通常用于在不同的数据类型之间进行转换。
-    //
     //重新解释转换不进行任何类型检查，因此可能会导致未定义的行为。
     int m = 10;
-    float n = reinterpret_cast<float&>(m); // 重新解释将int类型转换为float类型
+    // 重新解释将int类型转换为float类型
+    float n = reinterpret_cast<float&>(m);
+    float *f4 = reinterpret_cast<float*>(m);
+    //& 运算符访问的地址，它表示了在内存中的一个地址。
+    //* 星号是用来指定一个变量是指针
+    cout << "重新解释转换 " <<  m  << " , " << n << " , " << f4 <<  " , " << f4 << " , " << &f4 <<endl;
 
 }

@@ -13,13 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50d7c763-7f2f-40d2-9ba9-a1243cc3c122" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/YCStudyCC/test/01.学生管理系统.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YCStudyCC/test/StudentManager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/YCStudyCC/test/a.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyCC/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyCC/study1/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/study1/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YCStudyCC/study1/day1_hello.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/study1/day1_hello.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/YCStudyCC/study1/day3_data_type.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/YCStudyCC/study1/day3_data_type.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,22 +107,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "last_opened_file_path": "/Users/yc/github/YCStudyC",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yc/github/YCStudyC&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Python\YCMeiZiTu\image" />
@@ -206,6 +200,8 @@
       <updated>1544250419070</updated>
       <workItem from="1697161110368" duration="138000" />
       <workItem from="1705887562748" duration="733000" />
+      <workItem from="1711623690042" duration="1710000" />
+      <workItem from="1711850158983" duration="145000" />
     </task>
     <task id="LOCAL-00001" summary="更新爬虫代码">
       <created>1544493282085</created>
