@@ -11,22 +11,45 @@
 #include <iostream>
 // 必须的头文件
 #include <pthread.h>
+#include <iostream>
+#include <cstdlib>
+#include <pthread.h>
+#include <unistd.h>
+#include <thread>
+
 
 using namespace std;
 #define NUM_THREADS 5
 
+//pthread_create 创建线程
 void test0();
+
+//pthread_create 创建多个线程
 void test1();
+
+//pthread_exit 销毁线程
 void test2();
+
+//向线程传递参数
 void test3();
+
 void test4();
+
 void test5();
+
 void test6();
+
+//连接和分离线程
 void test7();
+
+//std::thread 创建线程
+//C++ 11 之后添加了新的标准线程库 std::thread，std::thread 在 <thread> 头文件中声明，因此使用 std::thread 时需要包含 在 <thread> 头文件。
+//之前一些编译器使用 C++ 11 的编译参数是 -std=c++11:
+//注意：g++ -std=c++11 day31_thread.cpp
 void test8();
 
 int main() {
-    test0();
+//    test0();
 //    test1();
 //    test2();
 //    test3();
@@ -34,13 +57,13 @@ int main() {
 //    test5();
 //    test6();
 //    test7();
-//    test8();
+    test8();
     return 0;
 }
 
 // 线程的运行函数
 void *say_hello(void *args) {
-    if (args != NULL){
+    if (args != NULL) {
         string str = *((string *) args);
         cout << "Hello Doubi！" << str << endl;
     } else {
@@ -49,10 +72,10 @@ void *say_hello(void *args) {
     return 0;
 }
 
-void test0(){
+void test0() {
     pthread_t thread;
     //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数
-    int ret = pthread_create(&thread,NULL, say_hello , (void *)&"yc dou bi");
+    int ret = pthread_create(&thread, NULL, say_hello, (void *) &"yc dou bi");
     //注意，最后一个传入参数，必须使用 & ，否则参数无法传递
     //int ret = pthread_create(&thread,NULL, say_hello , (void *)"yc dou bi");
     //创建线程成功时，函数返回 0，若返回值不为 0 则说明创建线程失败。
@@ -61,6 +84,9 @@ void test0(){
     } else {
         cout << "pthread_create success: " << ret << endl;
     }
+
+    //终止线程
+    //pthread_exit(thread);
 }
 
 //创建线程
@@ -119,16 +145,16 @@ void test4() {
 
 //向线程传递参数
 //这个实例演示了如何通过结构传递多个参数。您可以在线程回调中传递任意的数据类型，因为它指向 void，如下面的实例所示：
-struct thread_data{
+struct thread_data {
     int thread_id;
     char *message;
 };
 
-void *PrintYc(void *thread_arg){
+void *PrintYc(void *thread_arg) {
     struct thread_data *my_data;
     //my_data = static_cast<thread_data *>(thread_arg);
     my_data = (struct thread_data *) thread_arg;
-    cout << "Thread ID : " << my_data->thread_id ;
+    cout << "Thread ID : " << my_data->thread_id;
     cout << " Message : " << my_data->message << endl;
     pthread_exit(NULL);
 }
@@ -138,13 +164,13 @@ void test5() {
     struct thread_data td[NUM_THREADS];
     int rc;
     int i;
-    for( i=0; i < NUM_THREADS; i++ ){
-        cout <<"main() : creating thread, " << i << endl;
+    for (i = 0; i < NUM_THREADS; i++) {
+        cout << "main() : creating thread, " << i << endl;
         td[i].thread_id = i;
-        td[i].message = (char*)"This is message";
+        td[i].message = (char *) "This is message";
         //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数
-        rc = pthread_create(&threads[i], NULL,PrintYc, (void *)&td[i]);
-        if (rc){
+        rc = pthread_create(&threads[i], NULL, PrintYc, (void *) &td[i]);
+        if (rc) {
             cout << "Error:unable to create thread," << rc << endl;
             exit(-1);
         }
@@ -156,17 +182,104 @@ void test6() {
 }
 
 
+void *wait(void *t) {
+    int i;
+    long tid;
+    tid = (long) t;
+    sleep(1);
+    cout << "Sleeping in thread " << endl;
+    cout << "Thread with id : " << tid << "  ...exiting " << endl;
+    pthread_exit(NULL);
+}
+
 //连接和分离线程
 //我们可以使用以下两个函数来连接或分离线程：
 //pthread_join (threadid, status)
 //pthread_detach (threadid)
-void test7(){
+void test7() {
     //pthread_join() 子程序阻碍调用程序，直到指定的 threadid 线程终止为止。
     //当创建一个线程时，它的某个属性会定义它是否是可连接的（joinable）或可分离的（detached）。
     //只有创建时定义为可连接的线程才可以被连接。如果线程创建时被定义为可分离的，则它永远也不能被连接。
+
+    int rc;
+    int i;
+    pthread_t threads[NUM_THREADS];
+    pthread_attr_t attr;
+    void *status;
+
+    // 初始化并设置线程为可连接的（joinable）
+    pthread_attr_init(&attr);
+    pthread_attr_setdetachstate(&attr, PTHREAD_CREATE_JOINABLE);
+
+    for (i = 0; i < NUM_THREADS; i++) {
+        cout << "main() : creating thread, " << i << endl;
+        rc = pthread_create(&threads[i], NULL, wait, (void *) &i);
+        if (rc) {
+            cout << "Error:unable to create thread," << rc << endl;
+            exit(-1);
+        }
+    }
+
+    // 删除属性，并等待其他线程
+    pthread_attr_destroy(&attr);
+    for (i = 0; i < NUM_THREADS; i++) {
+        rc = pthread_join(threads[i], &status);
+        if (rc) {
+            cout << "Error:unable to join," << rc << endl;
+            exit(-1);
+        }
+        cout << "Main: completed thread id :" << i;
+        cout << "  exiting with status :" << status << endl;
+    }
+
+    cout << "Main: program exiting." << endl;
+    pthread_exit(NULL);
 }
 
+
+// 一个虚拟函数
+void foo(int Z) {
+    for (int i = 0; i < Z; i++) {
+        cout << "线程使用函数指针作为可调用参数\n";
+    }
+}
+
+// 可调用对象
+class thread_obj {
+public:
+    void operator()(int x) {
+        for (int i = 0; i < x; i++)
+            cout << "线程使用函数对象作为可调用参数\n";
+    }
+};
+
+
+
+//一个可调用对象可以是以下三个中的任何一个：
+//函数指针
+//函数对象
+//lambda 表达式
 void test8() {
+    cout << "线程 1 、2 、3 独立运行" << endl;
+    // 函数指针
+    thread th1(foo, 3);
+    // 函数对象
+    thread th2(thread_obj(), 3);
+    // 定义 Lambda 表达式
+//    auto f = [](int x) {
+//        for (int i = 0; i < x; i++)
+//            cout << "线程使用 lambda 表达式作为可调用参数\n";
+//    };
+    // 线程通过使用 lambda 表达式作为可调用的参数
+//    thread th3(f, 3);
+    // 等待线程完成
+    // 等待线程 t1 完成
+    th1.join();
+    // 等待线程 t2 完成
+    th2.join();
+    // 等待线程 t3 完成
+//    th3.join();
+
 
 }
 

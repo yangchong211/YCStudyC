@@ -35,6 +35,7 @@ set(CMAKE_CXX_STANDARD 17)
 # day28 模版
 # day29 预处理器
 # day30 信号处理
+# day31 多线程
 
 add_executable(YCStudyCC
         main.cpp
@@ -71,10 +72,11 @@ add_executable(YCStudyCC
         study1/day30_signal.cpp
         study1/day31_thread.cpp
         study1/day32_web.cpp
+        study1/day33_.cpp
         study2/text.cpp
         study4/5.cpp
         study4/51.cpp
         study4/graduateManager.h
         study4/StudentManager.cpp
         study4/StudentManager.h
-        test/StudentManager.cpp)
+        test/StudentManager.cpp )
