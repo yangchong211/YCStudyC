@@ -77,6 +77,10 @@ void test1() {
     cout << "\t最小值：" << (numeric_limits<size_t>::min)() << endl;
     cout << "string: \t" << "所占字节数：" << sizeof(string) << endl;
     // << "\t最大值：" << (numeric_limits<string>::max)() << "\t最小值：" << (numeric_limits<string>::min)() << endl;
+
+    int n[10] = {1,4,2,6};
+    int length = sizeof(n) / sizeof(n[0]);
+    cout << "除数: \t" << "所占字节数：" << length << endl;
     cout << "type: \t\t" << "************size**************" << endl;
 }
 
