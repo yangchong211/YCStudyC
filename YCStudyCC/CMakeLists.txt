@@ -4,6 +4,28 @@ project(YCStudyCC)
 set(CMAKE_CXX_STANDARD 17)
 
 # c++
+# 01.第一天：基础语法
+# 02.第二天：运算符和表达式
+# 03.第三天：判断和循环
+# 04.第四天：数组和容器
+# 05.第五天：指针和引用
+# 06.第六天：函数实践
+# 07.第七天：IO输入和输出
+# 08.第八天：类和对象
+# 09.第九天：继承和派生
+# 10.第十天：多线程和并发
+# 11.第十一天：线程安全锁
+# 12.第十二天：内存分配堆和栈
+# 13.第十三天：异常处理
+# 14.第十四天：STL标准模板库
+# 15.第十五天：设计模式
+# 16.第十六天：程序调试
+# 17.第十七天：网络通信
+# 18.第十八天：综合案例
+
+
+
+
 # day1 基础教程
 # day2 注释
 # day3 数据类型：基本的内置类型，typedef 声明，枚举类型，类型转换
@@ -49,7 +71,7 @@ add_executable(YCStudyCC
         study1/day7_xsf.cpp
         study1/day8_ysf.cpp
         study1/day9_yuju.cpp
-        study1/day10_fun.cpp
+        study1/day10_thread.cpp
         study1/day11_num.cpp
         study1/day12_array.cpp
         study1/day13_string.cpp
@@ -70,7 +92,6 @@ add_executable(YCStudyCC
         study1/day28_template.cpp
         study1/day29_define.cpp
         study1/day30_signal.cpp
-        study1/day31_thread.cpp
         study1/day32_web.cpp
         study1/day33_.cpp
         study2/text.cpp
