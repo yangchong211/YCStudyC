@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD 17)
 # 07.第七天：IO输入和输出
 # 08.第八天：类和对象
 # 09.第九天：继承和派生
-# 10.第十天：多线程和并发
+# 10.第十天：多线程和并发                 pthread_create创建线程，pthread_t向线程传递参数，连接和分离线程，std::thread使用
 # 11.第十一天：线程安全锁
 # 12.第十二天：内存分配堆和栈
 # 13.第十三天：异常处理
@@ -65,7 +65,7 @@ add_executable(YCStudyCC
         study1/day1_hello.cpp
         study1/day2_zhushi.cpp
         study1/day3_data_type.cpp
-        study1/day4_var.cpp
+        study1/day4_array.cpp
         study1/day5_zyy.cpp
         study1/day6_val.cpp
         study1/day7_xsf.cpp
@@ -74,7 +74,7 @@ add_executable(YCStudyCC
         study1/day10_thread.cpp
         study1/day11_num.cpp
         study1/day12_array.cpp
-        study1/day13_string.cpp
+        study1/day13_exception.cpp
         study1/day14_zhizhen.cpp
         study1/day15_reference.cpp
         study1/day16_time.cpp
@@ -86,7 +86,6 @@ add_executable(YCStudyCC
         study1/day22_duotai.cpp
         study1/day23_abs.cpp
         study1/day24_file_io.cpp
-        study1/day25_exception.cpp
         study1/day26_memory.cpp
         study1/day27_space.cpp
         study1/day28_template.cpp
