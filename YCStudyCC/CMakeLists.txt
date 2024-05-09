@@ -62,14 +62,14 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(YCStudyCC
         main.cpp
         # 下面是c++
-        study1/day1_hello.cpp
-        study1/day2_zhushi.cpp
+        study1/day1_basics.cpp
+        study1/day2_expression.cpp
         study1/day3_data_type.cpp
         study1/day4_array.cpp
         study1/day5_zyy.cpp
         study1/day6_val.cpp
         study1/day7_xsf.cpp
-        study1/day8_ysf.cpp
+        study1/day8_struct_class.cpp
         study1/day9_yuju.cpp
         study1/day10_thread.cpp
         study1/day11_num.cpp
