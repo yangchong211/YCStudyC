@@ -7,26 +7,20 @@
 
 using namespace std;
 
-//4.1.1 声明数组
-void test1();
-
-//4.1.2 初始化数组
-void test2();
-
-//4.1.3 访问数组元素
-void test3();
-
-//4.1.4 二维数组声明
-void test4();
-
-//4.1.5 指向数组的指针
-void test5();
-
-//4.1.6 传递数组给函数
-void test6();
-
-//4.1.7 从函数返回数组
-void test7();
+//4.1.1.1 声明数组
+void test4_1_1_1();
+//4.1.1.2 初始化数组
+void test4_1_1_2();
+//4.1.1.3 访问数组元素
+void test4_1_1_3();
+//4.1.2.1 多维数组
+void test4_1_2_1();
+//4.1.2.2 指向数组的指针
+void test4_1_2_2();
+//4.1.2.3 传递数组给函数
+void test4_1_2_3();
+//4.1.2.4 从函数返回数组
+void test4_1_2_4();
 
 //4.2.1 为什么有Vector
 void test8();
@@ -47,15 +41,15 @@ void test4_3();
 void test4_4();
 
 int main() {
-//    test1();
-//    test2();
-//    test3();
-//    test4();
-//    test5();
-//    test6();
-//    test7();
-//    test8();
-//    test9();
+    test4_1_1_1();
+    test4_1_1_2();
+    test4_1_1_3();
+    test4_1_2_1();
+    test4_1_2_2();
+    test4_1_2_3();
+    test4_1_2_4();
+    test8();
+    test9();
     test4_1();
     test4_2();
     test4_3();
@@ -66,7 +60,7 @@ int main() {
 
 //声明数组
 //在 C++ 中要声明一个数组，需要指定元素的类型和元素的数量，如下所示：
-void test1() {
+void test4_1_1_1() {
     //这叫做一维数组。arraySize 必须是一个大于零的整数常量，type 可以是任意有效的 C++ 数据类型。
     //例如，要声明一个类型为 double 的包含 10 个元素的数组 balance，声明语句如下：
     double balance[10];
@@ -74,12 +68,13 @@ void test1() {
     //&表示地址值
     cout << "声明数组: " << balance << " , " << *balance << " , " << &balance << endl;
     //声明数组: 0x16d85b558 , 3.47822e-321 , 0x16d85b558
+    double array[15];
 }
 
 
 //初始化数组
 //在 C++ 中，您可以逐个初始化数组，也可以使用一个初始化语句，如下所示：
-void test2() {
+void test4_1_1_2() {
     double balance1[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};
     //大括号 { } 之间的值的数目不能大于我们在数组声明时在方括号 [ ] 中指定的元素数目。
     //如果您省略掉了数组的大小，数组的大小则为初始化时元素的个数。因此，如果：
@@ -97,7 +92,7 @@ void test2() {
 //访问数组元素
 //数组元素可以通过数组名称加索引进行访问。元素的索引是放在方括号内，跟在数组名称的后边。例如：
 //double salary = balance[9];
-void test3() {
+void test4_1_1_3() {
     int n[10]; // n 是一个包含 10 个整数的数组
     // 初始化数组元素
     for (int i = 0; i < 10; i++) {
@@ -112,22 +107,22 @@ void test3() {
 
 
 //https://www.runoob.com/cplusplus/cpp-multi-dimensional-arrays.html
-void test4() {
+void test4_1_2_1() {
 
 }
 
 //https://www.runoob.com/cplusplus/cpp-pointer-to-an-array.html
-void test5() {
+void test4_1_2_2() {
 
 }
 
 //https://www.runoob.com/cplusplus/cpp-passing-arrays-to-functions.html
-void test6() {
+void test4_1_2_3() {
 
 }
 
 //https://www.runoob.com/cplusplus/cpp-return-arrays-from-function.html
-void test7() {
+void test4_1_2_4() {
 
 }
 

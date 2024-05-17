@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD 17)
 # 07.第七天：IO输入和输出
 # 08.第八天：类和对象
 # 09.第九天：继承和派生
-# 10.第十天：多线程和并发                 pthread_create创建线程，pthread_t向线程传递参数，连接和分离线程，std::thread使用
+# 10.第十天：多线程和并发
 # 11.第十一天：线程安全锁
 # 12.第十二天：内存分配堆和栈
 # 13.第十三天：异常处理
@@ -79,7 +79,6 @@ add_executable(YCStudyCC
         study1/day15_reference.cpp
         study1/day16_time.cpp
         study1/day17_input.cpp
-        study1/day18_struct.cpp
         study1/day19_class.cpp
         study1/day20_extend.cpp
         study1/day21_overive.cpp
