@@ -21,24 +21,12 @@ void test4_1_2_2();
 void test4_1_2_3();
 //4.1.2.4 从函数返回数组
 void test4_1_2_4();
-
-//4.2.1 为什么有Vector
-void test8();
-
-//4.2.2 Vector基础函数
-void test9();
-
-//4.4.1 C 风格字符串
-void test4_1();
-
-//4.4.2 函数处理字符串
-void test4_2();
-
-//4.4.3 C++中String类
-void test4_3();
-
-//4.4.4 输入字符串
-void test4_4();
+//4.2.1.1 为什么有Vector
+void test4_2_1_1();
+//4.2.1.2 Vector基础函数
+void test4_2_1_2();
+//4.2.1.3 Vector综合实践
+void test4_2_1_3();
 
 int main() {
     test4_1_1_1();
@@ -48,12 +36,9 @@ int main() {
     test4_1_2_2();
     test4_1_2_3();
     test4_1_2_4();
-    test8();
-    test9();
-    test4_1();
-    test4_2();
-    test4_3();
-    test4_4();
+    test4_2_1_1();
+    test4_2_1_2();
+    test4_2_1_3();
     return 0;
 }
 
@@ -131,7 +116,7 @@ void test4_1_2_4() {
 //向量（Vector）是一个封装了动态大小数组的顺序容器（Sequence Container）。
 //跟任意其它类型容器一样，它能够存放各种类型的对象。可以简单的认为，向量是一个能够存放任意类型的动态数组。
 //Vector(向量): C++ 中的一种数据结构，确切的说是一个类。它相当于一个动态的数组，当程序员无法知道自己需要的数组的规模多大时，用其来解决问题可以达到最大节约空间的目的。
-void test8() {
+void test4_2_1_1() {
     // 创建向量用于存储整型数据
     vector<int> vec;
     int i;
@@ -181,7 +166,7 @@ void test8() {
 //void swap(vector&):交换两个同类型向量的数据
 //void assign(int n,const T& x):设置向量中前n个元素的值为x
 //void assign(const_iterator first,const_iterator last):向量中[first,last)中元素设置成当前向量元素
-void test9() {
+void test4_2_1_2() {
     vector<int> obj; //创建一个向量存储容器 int
     for (int i = 0; i < 10; ++i) {
         obj.push_back(i);
@@ -205,70 +190,8 @@ void test9() {
     //访问（直接数组访问&迭代器访问）
 }
 
+//4.2.1.3 Vector综合实践
+void test4_2_1_3() {
 
-//C 风格字符串
-//C 风格的字符串起源于 C 语言，并在 C++ 中继续得到支持。字符串实际上是使用 null 字符 \0 终止的一维字符数组。因此，一个以 null 结尾的字符串，包含了组成字符串的字符。
-void test4_1() {
-    char site1[7] = {'R', 'U', 'N', 'O', 'O', 'B', '\0'};
-    char site2[] = "RUNOOB";
-    cout << "菜鸟教程: ";
-    cout << site1 << "\n" << endl;
-    cout << site2 << "\n" << endl;
-}
-
-
-//C++ 中有大量的函数用来操作以 null 结尾的字符串:
-void test4_2() {
-    char str1[13] = "runoob";
-    char str2[13] = "google";
-    char str3[13];
-    int len;
-
-    // 复制 str1 到 str3
-    strcpy(str3, str1);
-    cout << "strcpy( str3, str1) : " << str3 << endl;
-    // 连接 str1 和 str2。连接字符串 s2 到字符串 s1 的末尾。
-    strcat(str1, str2);
-    cout << "strcat( str1, str2): " << str1 << endl;
-    // 连接后，str1 的总长度
-    len = strlen(str1);
-    cout << "strlen(str1) : " << len << endl;
-    //如果 s1 和 s2 是相同的，则返回 0；如果 s1<s2 则返回值小于 0；如果 s1>s2 则返回值大于 0。
-    int isEqual = strcmp(str1, str2);
-    cout << "strcmp(str1) : " << isEqual << endl;
-}
-
-//C++ 标准库提供了 string 类类型，支持上述所有的操作，另外还增加了其他更多的功能。我们将学习 C++ 标准库中的这个类，现在让我们先来看看下面这个实例：
-void test4_3() {
-    string str1 = "yangchong";
-    string str2 = "tangxinyi";
-    string str3;
-    int len;
-    // 复制 str1 到 str3
-    str3 = str1;
-    cout << "str3 : " << str3 << endl;
-    // 连接 str1 和 str2
-    str3 = str1 + str2;
-    cout << "str1 + str2 : " << str3 << endl;
-    // 连接后，str3 的总长度
-    len = str3.size();
-    cout << "str3.size() :  " << len << endl;
-}
-
-//cin.getline() 是在输入一段字符完成后开始读取数据（注意，是输入完成后，以Enter为结束标志）
-void test4_4() {
-    int N = 100;
-    char X[N];
-    cin.getline(X, N);                               //以cin.getline形式输入
-    int a = 0, b = 0;
-    for (int i = 0; i < N; i++) {
-        if (X[i] == '#')                                      //为#为结束标志
-            break;
-        if (X[i] >= '0' && X[i] <= '9')
-            a++;                                         //统计数字个数
-        if ((X[i] >= 'a' && X[i] <= 'z') || (X[i] >= 'A' && X[i] <= 'Z'))
-            b++;                                      //统计英文字母个数
-    }
-    cout << "数字个数：" << a << "，字母个数：" << b << endl;
 }
 

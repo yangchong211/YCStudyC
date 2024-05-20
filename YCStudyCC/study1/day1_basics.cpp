@@ -51,6 +51,15 @@ void test4_1();
 //类型转换
 void test5_1();
 
+//1.5.1.1 C 风格字符串
+void test1_5_1_1();
+//1.5.1.2 函数处理字符串
+void test1_5_1_2();
+//1.5.1.3 C++中String类
+void test1_5_1_3();
+//1.5.1.4 输入字符串
+void test1_5_1_4();
+
 // main() 是程序开始执行的地方
 int main() {
     test1_1();
@@ -67,6 +76,10 @@ int main() {
     test3_3();
     test4_1();
     test5_1();
+    test1_5_1_1();
+    test1_5_1_2();
+    test1_5_1_3();
+    test1_5_1_4();
     return 0;
 }
 
@@ -469,6 +482,82 @@ void test4() {
     cout << "重新解释转换 " << m << " , " << n << " , " << f4 << " , " << f4 << " , " << &f4 << endl;
 
 }
+
+//1.5.1.1 C 风格字符串
+//C 风格字符串
+//C 风格的字符串起源于 C 语言，并在 C++ 中继续得到支持。字符串实际上是使用 null 字符 \0 终止的一维字符数组。因此，一个以 null 结尾的字符串，包含了组成字符串的字符。
+void test1_5_1_1() {
+    char site1[7] = {'R', 'U', 'N', 'O', 'O', 'B', '\0'};
+    char site2[] = "RUNOOB";
+    cout << "菜鸟教程: ";
+    cout << site1 << "\n" << endl;
+    cout << site2 << "\n" << endl;
+}
+
+//1.5.1.2 函数处理字符串，C++ 中有大量的函数用来操作以 null 结尾的字符串，strcpy复制，strlen返回长度，strcmp比较是否相同等等
+//C++ 中有大量的函数用来操作以 null 结尾的字符串:
+void test1_5_1_2(){
+    char c[10]; //c其实是个字符串，不是字符。字符串用数组表示，岂不是太复杂了！
+    char str1[13] = "runoob";
+    char str2[13] = "google";
+    char str3[13];
+    int len;
+
+    // 复制 str1 到 str3
+    strcpy(str3, str1);
+    cout << "strcpy( str3, str1) : " << str3 << endl;
+    // 连接 str1 和 str2。连接字符串 s2 到字符串 s1 的末尾。
+    strcat(str1, str2);
+    cout << "strcat( str1, str2): " << str1 << endl;
+    // 连接后，str1 的总长度
+    len = strlen(str1);
+    cout << "strlen(str1) : " << len << endl;
+    //如果 s1 和 s2 是相同的，则返回 0；如果 s1<s2 则返回值小于 0；如果 s1>s2 则返回值大于 0。
+    int isEqual = strcmp(str1, str2);
+    cout << "strcmp(str1) : " << isEqual << endl;
+}
+
+//1.5.1.3 C++中String类
+//C++ 标准库提供了 string 类类型，支持上述所有的操作，另外还增加了其他更多的功能。我们将学习 C++ 标准库中的这个类，现在让我们先来看看下面这个实例：
+void test1_5_1_3() {
+    string str1 = "yangchong";
+    string str2 = "tangxinyi";
+    string str3;
+    int len;
+    // 复制 str1 到 str3
+    str3 = str1;
+    cout << "str3 : " << str3 << endl;
+    // 连接 str1 和 str2
+    str3 = str1 + str2;
+    cout << "str1 + str2 : " << str3 << endl;
+    // 连接后，str3 的总长度
+    len = str3.size();
+    cout << "str3.size() :  " << len << endl;
+}
+
+
+//1.5.1.4 输入字符串
+//cin.getline() 是在输入一段字符完成后开始读取数据（注意，是输入完成后，以Enter为结束标志）
+void test1_5_1_4() {
+    int N = 100;
+    char X[N];
+    cin.getline(X, N);                               //以cin.getline形式输入
+    int a = 0, b = 0;
+    for (int i = 0; i < N; i++) {
+        if (X[i] == '#')                                      //为#为结束标志
+            break;
+        if (X[i] >= '0' && X[i] <= '9')
+            a++;                                         //统计数字个数
+        if ((X[i] >= 'a' && X[i] <= 'z') || (X[i] >= 'A' && X[i] <= 'Z'))
+            b++;                                      //统计英文字母个数
+    }
+    cout << "数字个数：" << a << "，字母个数：" << b << endl;
+}
+
+
+
+
+
 
 
 
