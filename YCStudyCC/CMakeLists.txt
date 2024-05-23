@@ -66,7 +66,7 @@ add_executable(YCStudyCC
         study1/day2_expression.cpp
         study1/day3_data_type.cpp
         study1/day4_array.cpp
-        study1/day5_zyy.cpp
+        study1/day5_reference.cpp
         study1/day6_val.cpp
         study1/day7_xsf.cpp
         study1/day8_struct_class.cpp
@@ -75,7 +75,6 @@ add_executable(YCStudyCC
         study1/day11_num.cpp
         study1/day12_array.cpp
         study1/day13_exception.cpp
-        study1/day14_zhizhen.cpp
         study1/day15_reference.cpp
         study1/day16_time.cpp
         study1/day17_input.cpp
