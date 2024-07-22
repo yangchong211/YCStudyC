@@ -99,26 +99,26 @@ add_executable(
         study2/day10_file_char.c
         study2/day11_date.c
 
-        study3/GameMain.c
+        demo/game/GameMain.c
 
-        study4/StudentManager.c
-        study4/StudentManager.h
+        demo/student/StudentManager.c
+        demo/student/StudentManager.h
 
 
-        study5/Sokoban.c
-        study5/Sokoban.h
+        demo/sokoban/Sokoban.c
+        demo/sokoban/Sokoban.h
 
-        study6/MineClearance.c
-        study6/MineClearance.h
+        demo/clearance/MineClearance.c
+        demo/clearance/MineClearance.h
 
-        study7/Calendar.c
-        study7/Calendar.h
+        demo/calendar/Calendar.c
+        demo/calendar/Calendar.h
 
-        study8/GuessNumber.c
+        demo/guess/GuessNumber.c
 
-        study9/GoBangGame.h
-        study9/GoBangGame.c
-        study10/MazeGame.c
-        study10/MazeGame.h
-        demo/StuManager.c
-        demo/StuManager.h)
+        demo/gobang/GoBangGame.h
+        demo/gobang/GoBangGame.c
+        demo/maze/MazeGame.c
+        demo/maze/MazeGame.h
+        demo/manager/StuManager.c
+        demo/manager/StuManager.h day1/day1_1_c.c)
