@@ -121,4 +121,4 @@ add_executable(
         demo/maze/MazeGame.c
         demo/maze/MazeGame.h
         demo/manager/StuManager.c
-        demo/manager/StuManager.h day1/day1_1_c.c)
+        demo/manager/StuManager.h day1/day1_1_c.c demo/student/Stu.h demo/student/Stu.c)

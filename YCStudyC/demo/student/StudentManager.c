@@ -124,6 +124,7 @@ void inputStudent(Node *node) {
 
 
 void printStudent(Node *node) {
+    printf("2.打印学生信息");
     Node *move = node->next;
     while (move != NULL) {
         printf("学号:%d 姓名:%s 成绩:%d \n", move->stu.stuNum, move->stu.name, move->stu.score);
