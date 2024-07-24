@@ -12,11 +12,11 @@ char weekday[7][10] = {"一", "二", "三", "四", "五", "六", "日"};
 
 
 int main() {
-    printCalendar();
-    printBegin();
-    int sum = daySum(year, month);
-    printResult(sum, year, month);
-    printStar();
+//    printCalendar();
+//    printBegin();
+//    int sum = daySum(year, month);
+//    printResult(sum, year, month);
+//    printStar();
     return 0;
 }
 

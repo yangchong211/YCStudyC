@@ -57,7 +57,7 @@ set(CMAKE_C_STANDARD 11)
 add_executable(
         YCStudyC main.c
         # c语言案例
-        study1/day1_hello_word.c
+        day1/day1_3_hello.c
         study1/day2_data.c
         study1/day3_var.c
         study1/day4_val.c
@@ -121,4 +121,4 @@ add_executable(
         demo/maze/MazeGame.c
         demo/maze/MazeGame.h
         demo/manager/StuManager.c
-        demo/manager/StuManager.h day1/day1_1_c.c demo/manager/Stu.h demo/manager/Stu.c)
+        demo/manager/StuManager.h day1/day1_1_c.c demo/manager/Stu.h demo/manager/Stu.c day1/day1_4_basic.c day2/day2_2_const.c)
