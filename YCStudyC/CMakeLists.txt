@@ -101,8 +101,8 @@ add_executable(
 
         demo/game/GameMain.c
 
-        demo/student/StudentManager.c
-        demo/student/StudentManager.h
+        demo/manager/StudentManager.c
+        demo/manager/StudentManager.h
 
 
         demo/sokoban/Sokoban.c
@@ -121,4 +121,4 @@ add_executable(
         demo/maze/MazeGame.c
         demo/maze/MazeGame.h
         demo/manager/StuManager.c
-        demo/manager/StuManager.h day1/day1_1_c.c demo/student/Stu.h demo/student/Stu.c)
+        demo/manager/StuManager.h day1/day1_1_c.c demo/manager/Stu.h demo/manager/Stu.c)
