@@ -121,4 +121,4 @@ add_executable(
         demo/maze/MazeGame.c
         demo/maze/MazeGame.h
         demo/manager/StuManager.c
-        demo/manager/StuManager.h day1/day1_1_c.c demo/manager/Stu.h demo/manager/Stu.c day1/day1_4_basic.c day2/day2_2_const.c)
+        demo/manager/StuManager.h day1/day1_1_c.c demo/manager/Stu.h demo/manager/Stu.c day1/day1_4_basic.c day2/day2_2_const.c day8/day8_1_pointer.c)
