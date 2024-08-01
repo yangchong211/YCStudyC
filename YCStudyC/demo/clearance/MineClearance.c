@@ -48,7 +48,7 @@ void playGame() {
     //打印给玩家看
     printBoard(show, ROW, COL);
 
-    //布置雷,将存放雷的数组有雷的位置设为'1'
+    //布置雷，将存放雷的数组有雷的位置设为'1'
     setMine(mine, ROW, COL);
 
     //排查雷
